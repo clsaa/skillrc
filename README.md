@@ -1,8 +1,32 @@
-# agent-onboarding-kit
+# 🚀 agent-onboarding-kit
 
 > 让任意 AI 编程 Agent(Codex / Claude Code / OpenCode…)读完就能装好一批推荐 skill,
 > 帮你在新环境或新 Agent 里立即进入高效工作状态。
 > A manifest any AI coding agent can read to install a curated set of recommended skills.
+
+<p align="center">
+  <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="https://github.com/clsaa/agent-onboarding-kit/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/clsaa/agent-onboarding-kit?style=flat&logo=github"></a>
+  <img alt="Skills" src="https://img.shields.io/badge/skills-10%20core%20%2B%205%20extra-blue">
+  <img alt="Agents" src="https://img.shields.io/badge/agents-Claude%20Code%20%7C%20Codex%20%7C%20OpenCode-8A2BE2">
+  <a href="./CONTRIBUTING.md"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen"></a>
+  <img alt="Data as of" src="https://img.shields.io/badge/data-2026--07-lightgrey">
+</p>
+
+---
+
+## 🧭 两种模式 · Two modes
+
+| | 🛠️ 安装模式 · Install mode | 🔄 自迭代模式 · Self-iterate mode |
+|---|---|---|
+| **入口 · Entry** | [`AGENTS.md`](./AGENTS.md) | [`SELF-UPDATE.md`](./SELF-UPDATE.md) |
+| **做什么 · What** | Agent 识别自己 → 读适配矩阵 → 装适配自己的 skill → 验证 → 汇报<br>Identify self → read matrix → install fitting skills → verify → report | 刷新星数(GitHub API)→ 校验仓库存活 → 发现新工具 → 写 CHANGELOG → 提交<br>Refresh stars via API → check repos → discover new tools → log → commit |
+| **一句话 · One-liner** | 新环境一键上手<br>Bootstrap a fresh environment | 让清单自我保鲜<br>Keep the manifest fresh |
+
+> 一句话用法 · TL;DR — clone 本仓库，对你的 Agent 说：**"读 AGENTS.md 并按说明安装 skill"**。
+> Clone this repo and tell your agent: **"read AGENTS.md and install the skills."**
+
+---
 
 ## 中文
 
