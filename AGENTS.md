@@ -12,7 +12,9 @@ Before anything else, determine which agent you are: **Claude Code**, **Codex**,
 
 - **Step 1** — Read [`skills/INDEX.md`](./skills/INDEX.md) and its compatibility matrix.
 - **Step 2** — Filter to rows where your agent column is `✅` (or `⚠️`, with a caution note).
-- **Step 3** — For each selected skill, open its `skills/<slug>.md` and run the Install command for your agent.
+- **Step 3** — For each selected skill, open its `skills/<slug>.md`:
+  - For a normal skill: run its Install command for your agent.
+  - For a **directory/index entry** (its Install line says it's a directory/index, e.g. Awesome Agent Skills, Awesome MCP Servers, Antigravity Awesome Skills, Composio Awesome Claude Skills): there is no single install command — open the linked repo, pick the specific sub-skills you want, and install each via `npx skills add <owner/repo>`, OR skip and note it for the user.
 - **Step 4** — Run the skill's Verify step; if it fails, report the failure and continue.
 - **Step 5** — Report to the user: installed, skipped (with reason), and any failures.
 

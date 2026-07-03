@@ -3,7 +3,7 @@
 - **What it does:** A curated directory/index of Model Context Protocol (MCP) servers for connecting agents to external tools and services.
 - **Repo:** https://github.com/punkpeye/awesome-mcp-servers
 - **Compatibility:** Claude Code ✅ | Codex ✅ | OpenCode ✅
-- **Install:**
+- **Install:** _Directory / index — no single command._ Browse the repo and install individual skills via `npx skills add <owner/repo>` (or the repo's own installer where provided).
   - Claude Code: browse index, add servers to your agent's MCP config
   - Codex / OpenCode / others: browse index, add servers to your agent's MCP config
 - **Verify:** Ask the agent to list configured MCP servers; entries chosen from the index appear.

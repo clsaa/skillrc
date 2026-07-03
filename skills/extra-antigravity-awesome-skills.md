@@ -3,7 +3,7 @@
 - **What it does:** A very large (1,800+) collection of installable skills with its own installer CLI for browsing and adding skills.
 - **Repo:** https://github.com/sickn33/antigravity-awesome-skills
 - **Compatibility:** Claude Code ✅ | Codex ✅ | OpenCode ✅
-- **Install:**
+- **Install:** _Directory / index — no single command._ Browse the repo and install individual skills via `npx skills add <owner/repo>` (or the repo's own installer where provided).
   - Claude Code: browse index / installer CLI
   - Codex / OpenCode / others: browse index / installer CLI
 - **Verify:** Ask the agent to list skills; entries installed via the installer CLI appear.

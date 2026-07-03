@@ -3,7 +3,7 @@
 - **What it does:** Composio's curated index of Claude-focused skills, organized as a browsable catalog rather than a single installable bundle.
 - **Repo:** https://github.com/ComposioHQ/awesome-claude-skills
 - **Compatibility:** Claude Code ✅ | Codex ⚠️ | OpenCode ⚠️
-- **Install:**
+- **Install:** _Directory / index — no single command._ Browse the repo and install individual skills via `npx skills add <owner/repo>` (or the repo's own installer where provided).
   - Claude Code: browse index
   - Codex / OpenCode / others: browse index
 - **Verify:** Ask the agent to list skills; entries chosen from the index appear.
