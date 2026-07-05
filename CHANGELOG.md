@@ -12,6 +12,9 @@ date-based entries rather than SemVer versions. See [`SELF-UPDATE.md`](./SELF-UP
 - 2 extra picks (both cross-agent, per-agent installs verified from upstream READMEs): [ponytail](./skills/extra-ponytail.md) (`DietrichGebert/ponytail`, ~74k — YAGNI / code-minimalism skill) and [caveman](./skills/extra-caveman.md) (`JuliusBrussee/caveman`, ~84.1k — output-token reduction). Both were seen in an earlier discovery pass and initially skipped; re-reviewed and confirmed ✅✅✅.
 - README skills badge updated to 10 core + 10 extra.
 
+### Changed
+- Curation mechanism hardened after a triage post-mortem (the two picks above were skipped in the 07-04 run on description-derived signals): `scripts/discover.sh` hints are renamed to `desc:*` and explicitly marked non-rejecting; `SELF-UPDATE.md` §B.2 gained triage rules (rejection requires the same verification rigor as acceptance; never judge by tone) and a persistent **Triage log** in `skills/INDEX.md`, seeded with the 07-04 deep-checked rejections.
+
 ## [2026-07-04] — Self-iterate run
 
 ### Added

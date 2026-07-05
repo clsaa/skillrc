@@ -40,6 +40,15 @@ Opinionated extras oriented toward AI, architecture, and full-stack work. The co
 | 9 | [ponytail](./extra-ponytail.md) | Collection | ✅ | ✅ | ✅ | 74k |
 | 10 | [caveman](./extra-caveman.md) | Collection | ✅ | ✅ | ✅ | 84.1k |
 
+## Triage log (reviewed, not added)
+
+Deep-checked candidates rejected with a dated reason, so future self-iterate runs neither re-review them needlessly nor re-skip others on weak signals (see `SELF-UPDATE.md` §B.2). A logged rejection may be revisited if the repo materially changes.
+
+- [headroom](https://github.com/headroomlabs-ai/headroom) — 2026-07-04 — compression library/proxy/MCP server, not an agent skill (out of scope).
+- [Agent-Reach](https://github.com/Panniantong/Agent-Reach) — 2026-07-04 — web-access CLI/MCP tooling, not a SKILL.md-style skill (out of scope).
+- [mattpocock/skills](https://github.com/mattpocock/skills) — 2026-07-04 — Claude Code-only (`.claude` conventions); manifest prefers cross-agent.
+- [get-shit-done](https://github.com/gsd-build/get-shit-done) — 2026-07-04 — Claude Code-only system; manifest prefers cross-agent.
+
 ---
 
 Compatibility and star counts as of 2026-07.

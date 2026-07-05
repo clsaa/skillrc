@@ -39,7 +39,7 @@ bash scripts/discover.sh          # optional args: MIN_STARS (default 500) TOP_N
 1. Builds the "already have" set from every `skills/*.md` `Repo:` line.
 2. Queries the GitHub Search API across several angles (`topic:agent-skills`, `topic:claude-code`, `SKILL.md` in readme, etc.).
 3. Diffs candidates against the have-set (case-insensitive) so nothing already in the manifest reappears.
-4. Applies a relevance gate (name/topics/description must be about skills / coding agents) and prints the survivors ranked by stars, with a `[cross-agent]` / `[1-agent?]` hint.
+4. Applies a relevance gate (name/topics/description must be about skills / coding agents) and prints the survivors ranked by stars, with a `[desc:multi]` / `[desc:1-agent]` hint (description-derived only — see the triage rules in §B.2).
 
 It deliberately does **not** edit anything — discovery is separate from curation.
 
@@ -47,12 +47,18 @@ It deliberately does **not** edit anything — discovery is separate from curati
 
 Keep only candidates that fit two constraints at once:
 
-- **Repo scope:** cross-agent tools that work across Claude Code, Codex, and OpenCode (prefer `[cross-agent]` rows; take single-agent tools only if exceptionally notable).
+- **Repo scope:** cross-agent tools that work across Claude Code, Codex, and OpenCode (prefer `[desc:multi]` rows; take single-agent tools only if exceptionally notable).
 - **Maintainer profile:** AI / system-architecture / full-stack — favor tools that extend those three hats, like the existing "Extra picks".
+
+**Triage rules — rejecting takes the same rigor as adding.** (Post-mortem: ponytail and caveman were wrongly skipped in the 2026-07-04 run on description-derived signals; both turned out to be verified cross-agent.)
+
+1. The `[desc:*]` hint comes from the repo's description/topics only and is frequently wrong — caveman's description said "Claude Code skill" while its INSTALL.md documents 30+ agents. Use the hint to order your review, **never** as a reason to reject.
+2. Before rejecting any candidate with more stars than the lowest-starred entry already in the manifest, open its README/INSTALL and check its actual agent-support docs. Do not judge by tone — meme-flavored repos can carry real, verified utility.
+3. Record every deep-checked rejection in the **Triage log** at the bottom of `skills/INDEX.md` (repo, date, one-line reason). Consult that log at the start of each run: logged rejections need no re-review unless the repo materially changed; an unlogged skip was never really reviewed.
 
 For each candidate you keep:
 
-1. Verify its star count via the GitHub API (never estimate) and its compatibility by actually reading its docs/README (never assume the `[cross-agent]` hint — it's only a heuristic from the description). A compatibility claim taken only from an upstream README/prose is `⚠️` at most. Reserve `✅` for compatibility you (or the manifest) actually confirmed by a successful install/dry-run.
+1. Verify its star count via the GitHub API (never estimate) and its compatibility by actually reading its docs/README (never assume the `[desc:*]` hint — it's only a heuristic from the description). A compatibility claim taken only from an upstream README/prose is `⚠️` at most. Reserve `✅` for compatibility you (or the manifest) actually confirmed by a successful install/dry-run.
 2. Create `skills/<slug>.md` (or `skills/extra-<slug>.md` for a supplementary pick) from the entry template in `CONTRIBUTING.md`, filled in completely.
 3. Add exactly one row to the correct table in `skills/INDEX.md`, following `CONTRIBUTING.md` step 3.
 4. If you added or removed any entries, update the `skills-N core + M extra` count in the `README.md` badge to match.

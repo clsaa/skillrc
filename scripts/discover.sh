@@ -91,7 +91,7 @@ fi
 
 # 3+4. Dedup, drop have-set, filter by MIN_STARS, rank, print top N.
 echo ""
-printf "%-8s  %-45s  %s\n" "STARS" "REPO" "CROSS-AGENT? / DESCRIPTION"
+printf "%-8s  %-45s  %s\n" "STARS" "REPO" "HINT / DESCRIPTION"
 printf '%s\n' "----------------------------------------------------------------------------------------------"
 
 # Pass have-set + thresholds into awk; emit ranked, deduped, filtered rows.
@@ -114,15 +114,18 @@ BEGIN {
   # "-skills" / "skill-" in a name is a strong signal.
   hay=tolower(repo " " topics " " desc)
   if (hay !~ /skill|subagent|\.claude|claude-code|claude code|coding agent|agent-skill|slash command|codex|opencode/) next
-  # cross-agent hint
-  hint="?"
+  # Agent-support hint — derived from DESCRIPTION/TOPICS ONLY, so it is often
+  # wrong (caveman described itself as a "Claude Code skill" while its
+  # INSTALL.md supports 30+ agents). Labeled desc:* to make that explicit.
+  # Use it to order review, NEVER as a reason to reject a candidate.
+  hint="desc:?"
   n=0
   if (hay ~ /claude/) n++
   if (hay ~ /codex/) n++
   if (hay ~ /opencode/) n++
   if (hay ~ /cursor/) n++
-  if (n>=2) hint="cross-agent"
-  else if (n==1) hint="1-agent?"
+  if (n>=2) hint="desc:multi"
+  else if (n==1) hint="desc:1-agent"
   count++
   if (count<=topn) printf "%-8s  %-45s  [%s] %s\n", stars, repo, hint, desc
 }
@@ -131,6 +134,10 @@ END { printf "\n%d relevant new candidate(s) above %s stars (showing up to %d).\
 rm -f "$raw" "$have_file"
 
 cat >&2 <<'EOF'
+
+NOTE: [desc:*] hints reflect the repo's description/topics ONLY. Real agent
+support often lives in README/INSTALL docs the hint cannot see. Prioritize
+with hints; reject only after opening the repo (SELF-UPDATE.md §B.2).
 
 Next (SELF-UPDATE.md §B): for each candidate you want to keep —
   1. Confirm it's genuinely new and in-scope (cross-agent, fits the profile).
