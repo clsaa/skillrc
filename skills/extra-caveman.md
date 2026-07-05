@@ -1,0 +1,11 @@
+# caveman
+- **Category:** Token-reduction skill
+- **What it does:** Makes the agent reply in terse "caveman-speak" to cut output tokens (~65% on replies) while keeping code, commands, and errors byte-for-byte exact.
+- **Repo:** https://github.com/JuliusBrussee/caveman
+- **Compatibility:** Claude Code ✅ | Codex ✅ | OpenCode ✅
+- **Install:**
+  - Claude Code: `claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman`
+  - Codex / OpenCode / others: `npx -y github:JuliusBrussee/caveman -- --only codex` (swap `codex` for `opencode`, etc.). A one-shot installer that auto-detects every agent is also available — `curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash` — but review it before piping to a shell.
+- **Verify:** The agent's prose gets terse while code/commands stay unchanged.
+- **When to use / skip:** Bonus pick to cut output-token cost across every reply (AI / architecture). Half-meme, real savings. Skip if terse prose would hurt your workflow, or if you avoid piped installers (use the per-agent `npx` command instead).
+- **Stars:** ~84.1k (as of 2026-07)

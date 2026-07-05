@@ -37,6 +37,8 @@ Opinionated extras oriented toward AI, architecture, and full-stack work. The co
 | 6 | [Taste Skill](./extra-taste-skill.md) | Collection | ✅ | ✅ | ✅ | 55.7k |
 | 7 | [UI/UX Pro Max Skill](./extra-ui-ux-pro-max-skill.md) | Collection | ✅ | ⚠️ | ⚠️ | 100k |
 | 8 | [Graphify](./extra-graphify.md) | Collection | ✅ | ✅ | ✅ | 77.2k |
+| 9 | [ponytail](./extra-ponytail.md) | Collection | ✅ | ✅ | ✅ | 74k |
+| 10 | [caveman](./extra-caveman.md) | Collection | ✅ | ✅ | ✅ | 84.1k |
 
 ---
 

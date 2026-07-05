@@ -6,6 +6,12 @@ date-based entries rather than SemVer versions. See [`SELF-UPDATE.md`](./SELF-UP
 
 ## [Unreleased]
 
+## [2026-07-05]
+
+### Added
+- 2 extra picks (both cross-agent, per-agent installs verified from upstream READMEs): [ponytail](./skills/extra-ponytail.md) (`DietrichGebert/ponytail`, ~74k — YAGNI / code-minimalism skill) and [caveman](./skills/extra-caveman.md) (`JuliusBrussee/caveman`, ~84.1k — output-token reduction). Both were seen in an earlier discovery pass and initially skipped; re-reviewed and confirmed ✅✅✅.
+- README skills badge updated to 10 core + 10 extra.
+
 ## [2026-07-04] — Self-iterate run
 
 ### Added
