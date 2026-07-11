@@ -7,5 +7,5 @@
   - Claude Code: `/plugin install superpowers@claude-plugins-official` (`claude-plugins-official` is a built-in marketplace pre-registered with Claude Code, so no `/plugin marketplace add` is needed first)
   - Codex / OpenCode / others: `npx skills add obra/superpowers`
 - **Verify:** Ask the agent to list skills; `brainstorming`/`test-driven-development` appear.
-- **When to use / skip:** Use for any serious multi-step dev work; skip for one-off scripts.
+- **When to use / skip:** Use for any serious multi-step dev work; skip for one-off scripts. **⚠️ Multi-agent fan-out:** ships `dispatching-parallel-agents` and `subagent-driven-development`, which spawn parallel sub-agents — powerful for many independent failures, but multiplies token cost and latency if triggered on small or sequential tasks. Enable deliberately.
 - **Stars:** ~252k (as of 2026-07)

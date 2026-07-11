@@ -8,6 +8,15 @@ This is the machine-readable manifest for the Agent Onboarding Kit: it lists eve
 - ⚠️ — works but not officially documented
 - ❌ — not supported
 
+## ⚠️ Resource note — multi-agent fan-out
+
+Some picks dispatch **parallel sub-agents** (review panels, parallel investigators, design variants). That multiplies token cost and latency — enable them deliberately, not for small or sequential edits:
+
+- **Superpowers** (core #1) — `dispatching-parallel-agents`, `subagent-driven-development`
+- **gstack** (extra #10) — multi-role review agents + `design-shotgun` (**heaviest** here; use `qa-only` / single `review` for small work)
+- **wshobson Agents** (extra #14) — the `agent-teams` / `agent-orchestration` plugins (other plugins are fine)
+- **caveman** (extra #9) — `cavecrew` sub-agents, but net token-**saving** (it compresses output)
+
 ## Core skills
 
 | # | Skill | Type | Claude Code | Codex | OpenCode | Stars |

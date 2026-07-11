@@ -7,5 +7,5 @@
   - Claude Code: `claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman`
   - Codex / OpenCode / others: `npx -y github:JuliusBrussee/caveman -- --only codex` (swap `codex` for `opencode`, etc.). A one-shot installer that auto-detects every agent is also available — `curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash` — but review it before piping to a shell.
 - **Verify:** The agent's prose gets terse while code/commands stay unchanged.
-- **When to use / skip:** Bonus pick to cut output-token cost across every reply (AI / architecture). Half-meme, real savings. Skip if terse prose would hurt your workflow, or if you avoid piped installers (use the per-agent `npx` command instead).
+- **When to use / skip:** Bonus pick to cut output-token cost across every reply (AI / architecture). Half-meme, real savings. Skip if terse prose would hurt your workflow, or if you avoid piped installers (use the per-agent `npx` command instead). **⚠️ Spawns sub-agents — but net token-*saving*:** the `cavecrew-investigator/builder/reviewer` helpers are sub-agents, yet caveman's whole purpose is token reduction (compressed sub-agent output returns ~60% smaller). Usually net-cheaper, but each cavecrew dispatch still costs — don't fan it out on trivial edits.
 - **Stars:** ~87.9k (as of 2026-07)

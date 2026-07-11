@@ -8,5 +8,5 @@
   - Claude Code: `/plugin marketplace add wshobson/agents` then `/plugin install <plugin>` (e.g. `python-development`)
   - Codex / OpenCode / others: consumed natively by Codex CLI, Cursor, Gemini CLI, and GitHub Copilot; for OpenCode/Gemini `git clone` then `make generate` and run the harness-specific install
 - **Verify:** After installing a plugin, its agents/skills/commands appear in the host (e.g. the plugin's slash commands are listed).
-- **When to use / skip:** Use when you want a broad, composable catalog that installs per-plugin (not all-at-once) and works across six hosts; skip if you want a single small skill rather than a marketplace, or can't run `make generate` for the OpenCode path.
+- **When to use / skip:** Use when you want a broad, composable catalog that installs per-plugin (not all-at-once) and works across six hosts; skip if you want a single small skill rather than a marketplace, or can't run `make generate` for the OpenCode path. **⚠️ Multi-agent fan-out (some plugins):** orchestration plugins like `agent-teams` and `agent-orchestration` spawn parallel agent teams; most other plugins don't. Watch token cost / latency when using those.
 - **Stars:** ~37.8k (as of 2026-07)

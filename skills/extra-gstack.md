@@ -8,5 +8,5 @@
   - Codex: same clone, then `./setup --host codex`
   - OpenCode: same clone, then `./setup --host opencode`
 - **Verify:** Ask the agent to list skills; the gstack role commands appear.
-- **When to use / skip:** Bonus pick for solo devs who want structured multi-role review pressure (architecture / full-stack). It's opinionated and large (23 commands) — skip if you prefer a minimal skill set.
+- **When to use / skip:** Bonus pick for solo devs who want structured multi-role review pressure (architecture / full-stack). It's opinionated and large (23 commands) — skip if you prefer a minimal skill set. **⚠️ Multi-agent fan-out (heaviest pick here):** the "virtual team" dispatches multiple review agents (`plan-ceo/design/devex/eng-review`), `design-shotgun` (parallel design variants), `pair-agent`, and `qa` — the biggest token/latency amplifier in this manifest. Prefer `gstack-qa-only` or a single `gstack-review` for small work.
 - **Stars:** ~121.1k (as of 2026-07)
