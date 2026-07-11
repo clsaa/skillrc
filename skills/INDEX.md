@@ -7,6 +7,14 @@ This is the machine-readable manifest for the Agent Onboarding Kit: it lists eve
 - ✅ — supported
 - ⚠️ — works but not officially documented
 - ❌ — not supported
+- ⭐ (in the Skill column) — maintainer's personal pick: installed and in daily use, not just curated (see below)
+
+## ⭐ Personal picks (maintainer)
+
+Rows marked ⭐ in the tables are the ones the maintainer actually runs day-to-day (a stronger signal than "curated"). As of 2026-07:
+
+- **Claude Code:** Superpowers, Vercel, Planning with Files, Context Engineering, Taste, UI/UX Pro Max, Graphify
+- **Codex:** Superpowers, Vercel, Planning with Files, Context Engineering, Taste, Graphify, MiniMax
 
 ## ⚠️ Resource note — multi-agent fan-out
 
@@ -21,13 +29,13 @@ Some picks dispatch **parallel sub-agents** (review panels, parallel investigato
 
 | # | Skill | Type | Claude Code | Codex | OpenCode | Stars |
 |---|-------|------|:-----------:|:-----:|:--------:|-------|
-| 1 | [Superpowers](./superpowers.md) | Framework | ✅ | ✅ | ✅ | 252k |
+| 1 | ⭐ [Superpowers](./superpowers.md) | Framework | ✅ | ✅ | ✅ | 252k |
 | 2 | [SuperClaude Framework](./superclaude-framework.md) | Framework | ✅ | ❌ | ❌ | 23.5k |
-| 3 | [MiniMax Skills](./minimax-skills.md) | Bundle | ✅ | ✅ | ✅ | 13k |
+| 3 | ⭐ [MiniMax Skills](./minimax-skills.md) | Bundle | ✅ | ✅ | ✅ | 13k |
 | 4 | [Anthropic Official Skills](./anthropic-official-skills.md) | Bundle | ✅ | ⚠️ | ⚠️ | 160.2k |
-| 5 | [Vercel Agent Skills](./vercel-agent-skills.md) | Bundle | ✅ | ✅ | ✅ | 28.9k |
-| 6 | [Planning with Files](./planning-with-files.md) | Collection | ✅ | ✅ | ✅ | 25.2k |
-| 7 | [Context Engineering Skills](./context-engineering-skills.md) | Collection | ✅ | ✅ | ✅ | 17.1k |
+| 5 | ⭐ [Vercel Agent Skills](./vercel-agent-skills.md) | Bundle | ✅ | ✅ | ✅ | 28.9k |
+| 6 | ⭐ [Planning with Files](./planning-with-files.md) | Collection | ✅ | ✅ | ✅ | 25.2k |
+| 7 | ⭐ [Context Engineering Skills](./context-engineering-skills.md) | Collection | ✅ | ✅ | ✅ | 17.1k |
 | 8 | [Composio Skills](./composio-skills.md) | Collection | ✅ | ✅ | ⚠️ | 0.1k |
 | 9 | [Antfu Skills](./antfu-skills.md) | Collection | ✅ | ✅ | ✅ | 5.5k |
 | 10 | [Awesome Agent Skills](./awesome-agent-skills.md) | Directory | ✅ | ✅ | ✅ | 27.8k |
@@ -43,9 +51,9 @@ Opinionated extras oriented toward AI, architecture, and full-stack work. The co
 | 3 | [Awesome MCP Servers](./extra-awesome-mcp-servers.md) | Directory | ✅ | ✅ | ✅ | 90.6k |
 | 4 | [Antigravity Awesome Skills](./extra-antigravity-awesome-skills.md) | Directory | ✅ | ✅ | ✅ | 42.8k |
 | 5 | [Composio Awesome Claude Skills](./extra-awesome-claude-skills.md) | Directory | ✅ | ⚠️ | ⚠️ | 67.4k |
-| 6 | [Taste Skill](./extra-taste-skill.md) | Collection | ✅ | ✅ | ✅ | 61.9k |
-| 7 | [UI/UX Pro Max Skill](./extra-ui-ux-pro-max-skill.md) | Collection | ✅ | ⚠️ | ⚠️ | 104.2k |
-| 8 | [Graphify](./extra-graphify.md) | Collection | ✅ | ✅ | ✅ | 82.1k |
+| 6 | ⭐ [Taste Skill](./extra-taste-skill.md) | Collection | ✅ | ✅ | ✅ | 61.9k |
+| 7 | ⭐ [UI/UX Pro Max Skill](./extra-ui-ux-pro-max-skill.md) | Collection | ✅ | ⚠️ | ⚠️ | 104.2k |
+| 8 | ⭐ [Graphify](./extra-graphify.md) | Collection | ✅ | ✅ | ✅ | 82.1k |
 | 9 | [caveman](./extra-caveman.md) | Collection | ✅ | ✅ | ✅ | 87.9k |
 | 10 | [gstack](./extra-gstack.md) | Collection | ✅ | ✅ | ✅ | 121.1k |
 | 11 | [Understand Anything](./extra-understand-anything.md) | Collection | ✅ | ✅ | ✅ | 72.7k |
